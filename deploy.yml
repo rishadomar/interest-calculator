@@ -1,0 +1,33 @@
+name: Deploy to GitHub Pages
+
+on:
+    push:
+        branches:
+            - main
+
+jobs:
+    deploy:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Checkout Repository
+              uses: actions/checkout@v2
+
+            - name: Set Up Node.js
+              uses: actions/setup-node@v2
+              with:
+                  node-version: 16.18.0
+
+            - name: Install Dependencies
+              run: npm install
+
+            - name: Build
+              run: npm run build -- --production
+
+            - name: Deploy to GitHub Pages
+              run: |
+                  git config user.name "${{ github.actor }}"
+                  git config user.email "${{ github.actor }}@users.noreply.github.com"
+                  gh-pages -d build
+              env:
+                  CI: true
+              # You need to install 'gh-pages' before using it. You can do so with 'npm install -g gh-pages'.
