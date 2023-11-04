@@ -1,4 +1,4 @@
-import { Button, TextField, InputAdornment, Divider, Grid } from '@mui/material';
+import { Button, TextField, InputAdornment, Divider, Grid, Container } from '@mui/material';
 import RepaymentTable from './RepaymentTable';
 import { useState } from 'react';
 import dayjs, { Dayjs } from 'dayjs';
@@ -17,7 +17,7 @@ const Form = () => {
     const [repaymentTableData, setRepaymentTableData] = useState<Array<MonthRepayment>>([]);
 
     return (
-        <div>
+        <Container sx={{ mt: 4, mb: 4 }}>
             <Grid container spacing={2}>
                 <Grid item xs={8}>
                     <TextField
@@ -133,7 +133,7 @@ const Form = () => {
             <Divider component='li' />
 
             <RepaymentTable data={repaymentTableData} />
-        </div>
+        </Container>
     );
 };
 export default Form;
