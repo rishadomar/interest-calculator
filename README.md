@@ -19,7 +19,7 @@ https://the-image-editor.com/image/editor
 4. display in Mobile
 5. Hide/Delete unused fields
 6. Add tabs for Tips on HomeLoan/Carloan/personal loan
-7.
+7. Number input should open up numeric keypad
 
 ### Ideas:
 
@@ -66,3 +66,6 @@ Tab 6: Budgetting
 
 -   How to budget
 -   Using spreadsheet to budget
+
+Credit card attribution
+<a href="https://www.freepik.com/free-vector/people-shopping-with-credit-card_3226184.htm#query=credit%20card%20cartoon&position=23&from_view=keyword&track=ais">Image by rawpixel.com</a> on Freepik
