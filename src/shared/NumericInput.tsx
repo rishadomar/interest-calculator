@@ -25,7 +25,7 @@ const NumericFormatCustom = React.forwardRef<NumericFormatProps, CustomProps>(fu
             }}
             thousandSeparator
             valueIsNumericString
-            prefix='R'
+            // prefix='R'
         />
     );
 });
@@ -34,18 +34,14 @@ interface State {
     numberformat: string;
 }
 
-export default function CurrencyInput() {
-    const [values, setValues] = React.useState<State>({
-        numberformat: '1320'
-    });
+interface CurrencyInputProps {
+    value: string | number;
+    onChange: (value: string) => void;
+    label: string;
+    name: string;
+}
 
-    const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-        setValues({
-            ...values,
-            [event.target.name]: event.target.value
-        });
-    };
-
+export default function CurrencyInput({ value, onChange, label, name }: CurrencyInputProps) {
     return (
         <Box
             sx={{
@@ -55,11 +51,11 @@ export default function CurrencyInput() {
             }}
         >
             <TextField
-                label='react-number-format'
-                value={values.numberformat}
-                onChange={handleChange}
-                name='numberformat'
-                id='formatted-numberformat-input'
+                label={label}
+                value={value}
+                onChange={(e) => onChange(e.target.value)}
+                name={name}
+                id={`numeric-input-${name}`}
                 InputProps={{
                     inputComponent: NumericFormatCustom as any
                 }}

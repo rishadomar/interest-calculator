@@ -124,10 +124,6 @@ const Form = () => {
                         sx={{ m: 2, width: '25ch' }}
                     />
                 </Grid>
-
-                <Grid item xs={8}>
-                    <CurrencyInput />
-                </Grid>
             </Grid>
 
             <Divider component='li' />
