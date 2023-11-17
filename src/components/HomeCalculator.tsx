@@ -89,8 +89,9 @@ const HomeCalculator = () => {
                 <Grid item xs={8}>
                     <DateSelector
                         label={'Start date of loan'}
+                        value={startDate}
                         helperText='This is the date when the loan amount will be transferred into your account'
-                        setStartDate={setStartDate}
+                        onChange={setStartDate}
                         sx={{ m: 2, width: '20ch' }}
                     />
                 </Grid>

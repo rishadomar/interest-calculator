@@ -5,18 +5,21 @@ import dayjs, { Dayjs } from 'dayjs';
 
 type DateSelectorProps = {
     label: string;
-    setStartDate: (value: Dayjs) => void;
+    value: Dayjs | null;
+    onChange: (value: Dayjs) => void;
     sx?: any;
     helperText: string;
 };
 
-const DateSelector = ({ label, setStartDate, sx, helperText }: DateSelectorProps) => {
+const DateSelector = ({ label, value, onChange, sx, helperText }: DateSelectorProps) => {
     return (
         <LocalizationProvider dateAdapter={AdapterDayjs}>
             <DatePicker
                 label={label}
+                value={value}
+                format='DD/MM/YYYY'
                 {...sx}
-                onChange={(value: string | null) => setStartDate(dayjs(value))}
+                onChange={(value: string | null) => onChange(dayjs(value))}
                 slotProps={{ textField: { helperText: helperText } }}
             />
         </LocalizationProvider>

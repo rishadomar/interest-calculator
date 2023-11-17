@@ -1,7 +1,7 @@
 const HomeIntroduction = () => {
     return (
         <div>
-            <h2>Introduction</h2>
+            <h3>Introduction</h3>
             <p>
                 Buying a home is one of the most exciting things you will do. Your own home - a place where you feel comfortable and safe.
             </p>
