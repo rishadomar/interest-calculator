@@ -1,6 +1,5 @@
 {
     "name": "interest-calculator",
-    "homepage": "http://rishadomar.github.io/interest-calculator",
     "version": "0.1.0",
     "private": true,
     "dependencies": {
@@ -16,6 +15,7 @@
         "@types/react": "^18.2.15",
         "@types/react-dom": "^18.2.7",
         "dayjs": "^1.11.9",
+        "firebase": "^10.7.2",
         "react": "^18.2.0",
         "react-dom": "^18.2.0",
         "react-number-format": "^5.2.2",

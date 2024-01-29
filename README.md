@@ -1,5 +1,10 @@
 ### To deploy:
 
+nvm use 18.19.0
+
+### To deploy
+
+npm run build
 npm run deploy
 
 ### references:
